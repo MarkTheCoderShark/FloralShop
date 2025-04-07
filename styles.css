@@ -133,12 +133,9 @@ img {
     opacity: 0.7;
 }
 
+/* Remove the floral divider since we already have the gradient line */
 .floral-divider {
-    height: 2px;
-    width: 80px;
-    background-color: var(--primary-color);
-    margin: 0 auto;
-    position: relative;
+    display: none;
 }
 
 .floral-divider::before,
@@ -244,7 +241,7 @@ img {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
-                url('https://images.unsplash.com/photo-1470509037663-253afd7f0f51?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+                url('https://images.unsplash.com/photo-1487530811176-3780de880c2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -562,6 +559,17 @@ img {
     font-size: 1rem;
     transition: var(--transition);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--light-color);
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%234a4a4a' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem;
 }
 
 .form-group input:focus,
@@ -604,7 +612,8 @@ img {
 
 .footer-logo h2 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--light-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .footer-logo p {
